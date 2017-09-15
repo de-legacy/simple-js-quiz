@@ -1,6 +1,6 @@
 /*
 Program Quiz sederhana menggunakan JavaScript
-Pseudocode di Readme.md
+Pseudocode ada di README.md
 */
 
 // Object	15
