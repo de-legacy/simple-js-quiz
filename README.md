@@ -13,14 +13,66 @@ Set "currentQuestion" dengan nilai 0
 
 Set "scores" dengan nilai 0
 
-Tulis Pertanyaan quiz berdasarkan "quizQuestions[currentQuestion].question"
+Tulis Pertanyaan quiz berdasarkan "currentQuestion" sebagai index. quizQuestions[currentQuestion].question"
 
-Tulis Pilihan jawaban quiz berdasarkan "quizQuestions[currentQuestion].choices"
+Tulis Pilihan jawaban quiz berdasarkan currentQuestion" sebagai index. "quizQuestions[currentQuestion].choices"
 
 Tekan tombol "Jawab Pertanyaan" ditekan, Munculkan Input untuk menjawab quiz dengan nilai antara 1 - 4
 
-IF Input nilai Jawaban === correctAnswer[currentQuestion]
+IF Input nilai "Jawaban" === correctAnswer[currentQuestion]
 
-   Tambahkan Score + 10
+    Tambahkan "Score" + 10
+    
+    Tambahkan nilai "Jawaban" kedalam Array 	"yourAnswer"
+   
+    Tambah nilai "currentQuestion" + 1
+   
+    IF  "currentQuestion" < "quizQuestions.length"
+   
+      Munculkan pertanyaan selanjutnya
 	
+	ELSE
+		
+	  Munculkan pesan selesai quiz telah selesai
+
+	  Munculkan "Score" akhir dengan perhitungan (score / quizQuestions.length) * 10
+
+	  Sembunyikan tombol "Jawab Pertanyaan"	
+
+	  Koreksi Jawaban yang ada dengan perulangan sebanyak jawaban
+
+	  FOR i = 0  ; i < yourAnswer.length ; i++
+		
+		Munculkan Alert berisi Jawaban Input dan Jawaban Yang benar
+
+	  ENDFOR
+
+	ENDIF 
+
+ELSE	
+
+	"Score" tidak bertambah
+	
+	Tambahkan nilai "Jawaban" kedalam Array "yourAnswer"
+	
+    IF  "currentQuestion" < "quizQuestions.length"
+   
+      Munculkan pertanyaan selanjutnya
+	
+	ELSE
+		
+	  Munculkan pesan selesai quiz telah selesai
+
+	  Munculkan "Score" akhir dengan perhitungan (score / quizQuestions.length) * 10
+
+	  Sembunyikan tombol "Jawab Pertanyaan"	
+
+	  Koreksi Jawaban yang ada dengan perulangan sebanyak jawaban
+
+	  FOR i = 0  ; i < yourAnswer.length ; i++
+		
+		Munculkan Alert berisi Jawaban Input dan Jawaban Yang benar
+
+	  ENDFOR
+
 END IF

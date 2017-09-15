@@ -119,9 +119,9 @@ function loadQuiz() {
 		quizChoices.innerHTML = "<h2>Final Scores: "+finalScores+"</h2>";
 		document.getElementById("btnAnswer").style.visibility = "hidden"; 
 
-		// FOR 5
+		
 		console.log("== Your Answer ==\n");
-
+		// FOR 5
 		for (var i = 0; i < yourAnswer.length; i++) {
 			// console.log("Your Answer on Question #: "+parseInt(i+1)+" is "+yourAnswer[i]);
 			answerString = quizQuestions[i].choices[parseInt(yourAnswer[i] - 1)];
@@ -129,7 +129,7 @@ function loadQuiz() {
 			questionString = quizQuestions[i].question;
 
 			console.log("Your Answer on Question #: "+parseInt(i+1)+":\n "+questionString+"\n"+answerString+"\n The correct answer is: \n "+correctAnswerString);
-			alert("Your Answer on Question #: "+parseInt(i+1)+":\n "+questionString+"\n"+answerString+"\n The correct answer is:\n "+correctAnswerString);
+			alert("Your Answer on Question #: "+parseInt(i+1)+":\n "+questionString+"\n"+answerString+"\n\n The correct answer is:\n "+correctAnswerString);
 		}
 	}
 }
