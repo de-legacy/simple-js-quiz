@@ -4,20 +4,30 @@
 	<meta charset="UTF-8">
 	<title>Simple JavaScript App</title>
 </head>
+<style>
+	.quiz-wrapper {
+		width: 70%;
+		padding: 1rem;
+		background: #f7f3e6;
+		border: 1px dashed #ccc;
+		margin: 1rem auto;
+	}
+</style>
 <body>
-	
-	<div id="quizArea">
-		
-	</div>
+	<div class="quiz-wrapper">
+		<div id="quizArea">
 
-	<hr>		
-	<div id="quizChoices">
-		
+		</div>
+
+		<hr>		
+		<div id="quizChoices">
+
+		</div>
+
+		<br/>
+		<button id="btnAnswer" onClick="answerQuestion();">Answer Question</button>
+		<button id="btnReload" onclick="javascript:window.location.reload();">Reset Quiz</button>
 	</div>
-	
-	<br/>
-	<button id="btnAnswer" onClick="answerQuestion();">Jawab Pertanyaan</button>
-	<button id="btnReload" onclick="javascript:window.location.reload();">Ulang ke Awal</button>
 	<script src="myapp.js"></script>
 </body>
 </html>

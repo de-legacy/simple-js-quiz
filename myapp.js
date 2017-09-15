@@ -63,11 +63,11 @@ init_quiz();
 
 // Function 10
 function init_quiz() {
-	quizArea.innerHTML = quizQuestions[currentQuestion].question;
-	formatQuestion(quizQuestions[currentQuestion].choices);	
+	quizArea.innerHTML = "<h3>"+quizQuestions[currentQuestion].question+"</h3>";
+	formatQuiz(quizQuestions[currentQuestion].choices);	
 }
 
-function formatQuestion(questionChoices) {
+function formatQuiz(questionChoices) {
 	var arr = [];
 
 	for(var i = 0; i < questionChoices.length; i++) {
@@ -78,7 +78,7 @@ function formatQuestion(questionChoices) {
 }
 
 function answerQuestion() {
-	var answer = prompt("Jawab Pertanyaan dengan angka 1 - 4");
+	var answer = prompt("Answer the question with numbers 1 - 4");
 	checkAnswer(answer);
 }
 
@@ -111,8 +111,8 @@ function loadQuiz() {
 
 	// Cek jika quiz masih ada. Jika ya, Munculkan pertanyaan berikut nya, jika tidak munculkan pesan terakhir.
 	if (currentQuestion < quizQuestions.length) {
-		quizArea.innerHTML = quizQuestions[currentQuestion].question;
-		formatQuestion(quizQuestions[currentQuestion].choices);	
+		quizArea.innerHTML = "<h3>"+quizQuestions[currentQuestion].question+"</h3>";
+		formatQuiz(quizQuestions[currentQuestion].choices);	
 	} else {
 		quizArea.innerHTML = "Thank you! You've completed the Quiz. Check your scores below";
 		quizChoices.innerHTML = "<h2>Final Scores: "+finalScores+"</h2>";
