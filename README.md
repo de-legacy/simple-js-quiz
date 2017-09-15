@@ -15,15 +15,15 @@ Set "scores" dengan nilai 0
 
 Tulis Pertanyaan quiz berdasarkan "currentQuestion" sebagai index. quizQuestions[currentQuestion].question"
 
-Tulis Pilihan jawaban quiz berdasarkan currentQuestion" sebagai index. "quizQuestions[currentQuestion].choices"
+Tulis Pilihan jawaban quiz berdasarkan "currentQuestion" sebagai index. "quizQuestions[currentQuestion].choices"
 
-Tekan tombol "Jawab Pertanyaan" ditekan, Munculkan Input untuk menjawab quiz dengan nilai antara 1 - 4
+Tekan tombol "Jawab Pertanyaan", Munculkan Input untuk menjawab quiz dengan nilai antara 1 - 4
 
 IF Input nilai "Jawaban" === correctAnswer[currentQuestion]
 
     Tambahkan "Score" + 10
     
-    Tambahkan nilai "Jawaban" kedalam Array 	"yourAnswer"
+    Tambahkan nilai "Jawaban" kedalam Array "yourAnswer"
    
     Tambah nilai "currentQuestion" + 1
    
@@ -41,7 +41,7 @@ IF Input nilai "Jawaban" === correctAnswer[currentQuestion]
 
 	  Koreksi Jawaban yang ada dengan perulangan sebanyak jawaban
 
-	  FOR i = 0  ; i < yourAnswer.length ; i++
+	  FOR indeks = 0, diulangi sampai panjang "yourAnswer"
 		
 		Munculkan Alert berisi Jawaban Input dan Jawaban Yang benar
 
@@ -69,7 +69,7 @@ ELSE
 
 	  Koreksi Jawaban yang ada dengan perulangan sebanyak jawaban
 
-	  FOR i = 0  ; i < yourAnswer.length ; i++
+	   FOR indeks = 0, diulangi sampai panjang "yourAnswer"
 		
 		Munculkan Alert berisi Jawaban Input dan Jawaban Yang benar
 
