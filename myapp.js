@@ -1,5 +1,6 @@
 /*
 Program Quiz sederhana menggunakan JavaScript
+Pseudocode di Readme.md
 */
 
 // Object	15
@@ -107,7 +108,7 @@ function loadQuiz() {
 	console.log("Scores: "+scores);
 	console.log("My Answer: "+yourAnswer);
 
-	var answerString, correctAnswerString;
+	var answerString, correctAnswerString, questionString;
 
 	// Cek jika quiz masih ada. Jika ya, Munculkan pertanyaan berikut nya, jika tidak munculkan pesan terakhir.
 	if (currentQuestion < quizQuestions.length) {
@@ -125,9 +126,10 @@ function loadQuiz() {
 			// console.log("Your Answer on Question #: "+parseInt(i+1)+" is "+yourAnswer[i]);
 			answerString = quizQuestions[i].choices[parseInt(yourAnswer[i] - 1)];
 			correctAnswerString = quizQuestions[i].choices[parseInt(correctAnswer[i] - 1)];
+			questionString = quizQuestions[i].question;
 
-			console.log("Your Answer on Question #: "+parseInt(i+1)+" is "+answerString+"\n The correct answer is: "+correctAnswerString);
-			alert("Your Answer on Question #: "+parseInt(i+1)+" is "+answerString+"\n The correct answer is: "+correctAnswerString);
+			console.log("Your Answer on Question #: "+parseInt(i+1)+":\n "+questionString+"\n"+answerString+"\n The correct answer is: \n "+correctAnswerString);
+			alert("Your Answer on Question #: "+parseInt(i+1)+":\n "+questionString+"\n"+answerString+"\n The correct answer is:\n "+correctAnswerString);
 		}
 	}
 }
